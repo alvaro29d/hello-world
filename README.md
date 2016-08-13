@@ -69,3 +69,45 @@ combina ambas opciones
 
 Graficar o ve una representacion ascci de todos los commits
 >git log --graph --all --decorate --oneline
+
+
+###Remove
+
+Elimina el archivo del sistema de archivos, y lo marca como elimado en la stage area
+cuando se commitea se elimina de futuras revisiones.
+>git rm filename.txt
+
+Si se elimina un archivo directamente
+>rm filename.txt
+al hacer git status se muestra que se elimino, pero no se encuentra el cambio en la stage area, para que se elimine utilizar el comando normal, para que se agregue la eliminacion al stage area
+>git rm filename.txt
+
+Para elminar muchos archivos externamente, se pueden agregar a eliminar en el stage con:
+>git add -u .
+
+Si quieres eliminar un archivo del repositorio, pero dejarlo en tu carpeta usar:
+>git rm --cached filename.txt
+Se agrega al stage para eliminar y git lo deja de ratrear (track)
+
+
+###Move files
+
+Cambiar de nombre y mover archivos es lo mismo
+
+Mueve los archivos y git lo registra como cambio de nombre
+>git mv original.txt ubicacionNueva/original.txt
+
+Si se mueve el archivo por sistema operativo
+>mv original.txt ubicacionNueva/original.txt
+git lo registra como que existe un nuevo archivo (ubicacionNueva/original.txt) y que otro se elimino (original.txt)
+Para arreglar eso y se registre como que se movio hacer:
+>git rm original.txt
+>git add ubicacionNueva/original.txt
+
+Si se mueven varios archivos por sistema operativo se puede agragar los cambios a la staging area utilizando:
+>git add -A .
+
+Para ver el log de un archivo
+>git log --stat -- ubicacionNueva/original.txt
+Pero no muestra el historia antes de moverlo
+
