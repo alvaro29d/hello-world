@@ -107,6 +107,7 @@ git lo registra como que existe un nuevo archivo (ubicacionNueva/original.txt) y
 Para arreglar eso y se registre como que se movio hacer:
 >git rm original.txt
 >git add ubicacionNueva/original.txt
+
 ---
 
 Si se mueven varios archivos por sistema operativo se puede agragar los cambios a la staging area utilizando:
