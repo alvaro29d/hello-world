@@ -131,5 +131,54 @@ Si se mueven varios archivos por sistema operativo se puede agragar los cambios 
 
 Para ver el log de un archivo
 >git log --stat -- ubicacionNueva/original.txt
-Pero no muestra el historia antes de moverlo
+
+Pero no muestra el historia antes de moverlo, para que lo haga:
+>git log --stat -M --follow -- ubicacionNueva/original.txt
+
+---
+
+Git considera un movimiento cuando encuentra dos archivos similares que se hayan agregado y eliminado. De forma predeterminada git considera que son iguales cuando son 50% iguales, ese umbral se lo puede ajustar (similarity).
+
+Video the 'Ship of Theseus'
+tipos de cambios
+cbs break history
+
+###Ignore
+Evitar comitear o agragar al area de stage archivos
+
+Crear un archivo .gitignore agregarlo al stage y commitearlo
+>touch .gitignore
+>git add .gitignore
+>git commit -M "agregando archivos a ignorar"
+
+El archivo debe contener los nombres o patrones de archivos a ignorar
+
+- nombre de archivo: fileName.txt
+- patron: *.log
+- ignorar direcotrio: nombreDirectorio/
+
+---
+
+Se puede agregar archivos .gitignore a subdirectorios, estos tomaran precedencia, y permiten negar patrones agregando:
+>!nombreDeArchivo
+
+---
+Usar # para comentarios
+
+
+---
+
+Para listar todos los archivos ignorados:
+>git ls-files --others --ignores --exclude-standard
+
+###Branc
+Comenzar a agregar codigo en
+
+
+
+---
+
+
+
+
 
