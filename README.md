@@ -69,7 +69,7 @@ Filtrar por color solo las palabras cambiadas
 >git diff --word-diff
 
 Muestra solo los cambios en archivos sin el resto de informacion
->git diff -stat
+>git diff --stat
 
 ###LOG
 Mostrar el historial
