@@ -171,13 +171,50 @@ Usar # para comentarios
 Para listar todos los archivos ignorados:
 >git ls-files --others --ignores --exclude-standard
 
-###Branc
-Comenzar a agregar codigo en
+###Branch
 
+Master representa lo que esta en produccion.
+Para trabajar en un repositorio crear una branch.
+>git branch nombreBranch
 
+eliminar branch
+>git branch -d nombreBranch
+
+si los cambios no estan completamente aplicados al master sale un mensaje de error, utilizar -D para forzar la eliminacion
 
 ---
 
+Para moverse entre branches usar
+>git checkout nombreBranchDestino
+
+Cualquier cambio que este en el staging area permanecera ahi, y se podra sobreescribir
+
+
+###Checkout
+
+Para ver en que branch estamos se utilizan:
+>git branch
+>git status
+
+---
+Para cambiar de branch
+>git checkout nombreBranch
+
+Para cambiar a puntos del historial (log_id) detachHead no se puede hacer commits
+>git checkout log_id
+
+---
+
+Para revertir cambios se usa:
+>git checkout -- nombreArchivoARevertir.txt
+
+---
+
+Crear branch y moverse a esa nueva branch
+>git checkout -b nombreNuevaBranch
+
+
+Video 14 ...
 
 
 
