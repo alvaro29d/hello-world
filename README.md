@@ -276,9 +276,31 @@ eliminar el branch ya importado
 
 ###Network
 
-crear
+Si tenemos un repositorio que solo se encuentra en la laptop, hay que confgurar donde se enviara la informacion
+>git remote add origin http://github.com/alvaro29d/hello-world
+>git remote add nameDestination URLDestination
 
+para modificar la url:
+>git remote set-url origin http://github.com/nueva/url
 
+para eliminar uno de los 'remote'
+>git remote rm origin
 
+para consultar las urls:
+>git remote -v
 
+Consultar branch de la localizacion remote
+>git branch -r
+
+###Fetch Pull Push
+
+Fetch trae la informacion del repo remoto y la coloca en nuestro branch remote (git branch -r)
+>git fetch origin
+
+Pull llama primero Fetch y luego a Merge, Ej: git traera todos los cambios del branch desde el repo remoto
+>git checkout nombreBranch
+>git pull origin
+
+Push envia los cambios al repo remoto y tambien actualiza el arbol de trakeo de branches
+>git push origin
 
