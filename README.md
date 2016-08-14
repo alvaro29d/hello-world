@@ -9,8 +9,33 @@ Duplicar Repositorio
 >https://help.github.com/articles/duplicating-a-repository/
 
 
-##Comandos
+##GitHub & Git Foundations • Training
 https://www.youtube.com/playlist?list=PLg7s6cbtAD15G8lNyoaYDuKZSKyJrgwB-
+
+###Config Git
+
+Config usuario y e-mail
+>git config --global user.name
+>git config --global user.mail
+
+Normalizar final de Lineas
+>git config --global core.autocrlf true
+
+Config colores
+>git config --global color.ui auto
+
+Scopes Leves
+- system (menor prioridad)
+- global
+- local (mayor prioridad)
+
+###Iniciar repositorio
+
+Crear un repositorio en un proyecto existente no versionado
+>git init
+
+Antes de comenzar el proyecto se puede crear el repositorio:
+>git init nombreNuevoDirectorio
 
 ###Commit
 
@@ -214,7 +239,45 @@ Crear branch y moverse a esa nueva branch
 >git checkout -b nombreNuevaBranch
 
 
-Video 14 ...
+###Merge
+
+Ir a repositorio master donde queremos importar los cambios de un branch y usar merge
+>git checkout master
+>git merge branchConCambios
+
+---
+
+Tratar de hacer merge y si hay conflictos buscalos con 
+>git merge branchConCambios
+>git status
+
+Editar los archivos con conflictos en un editor
+Identificar Head como repositorio master
+Agregar los cambios al staging area
+Commit cambios
+>git add nombreArchivoConConflictos
+>git commit
+
+---
+
+Limpia el working directory y stage area con el ultimo commit 
+>git merge --abort
+
+---
+
+Para commitear una branch pisando los cambios del head
+>git merge --squash branchConCambios
+>git commit -m "importar tooodos los cambios"
+
+---
+
+eliminar el branch ya importado
+>git branch -d nombreBranchYaImportada
+
+###Network
+
+crear
+
 
 
 
