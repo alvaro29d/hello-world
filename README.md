@@ -304,3 +304,8 @@ Pull llama primero Fetch y luego a Merge, Ej: git traera todos los cambios del b
 Push envia los cambios al repo remoto y tambien actualiza el arbol de trakeo de branches
 >git push origin
 
+
+###Graphic UI
+
+Github Desktop es una aplicacion con soporte para Windows y Mac, Linux Jodete
+
